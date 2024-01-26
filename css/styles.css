@@ -1,0 +1,190 @@
+/* estilos.css */
+:root {
+  --color-primario: #010326;
+  --color-secundario: #3DF2F2;
+  --color-terciario: #5799F7;
+  --color-enfasis: #A61723;
+  --espaciado: 1.25rem;
+}
+body {
+  max-width: 80rem;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  flex-shrink: 0;
+  background: var(--0468-bf, #0455BF);
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+
+
+/* Navbar */
+.navbar {
+  width: 69.375rem; /* El ancho del rectángulo será el 90% del ancho de la ventana */
+  height: 4.375rem; /* Altura del rectángulo */
+  margin: 0 auto; /* Centra el rectángulo horizontalmente */
+  position: fixed; /* El rectángulo se mantendrá en la misma posición incluso al desplazarse */
+  top: 0; /* El rectángulo estará en la parte superior de la página */
+  left: 0; /* El rectángulo estará alineado a la izquierda */
+  right: 0; /* El rectángulo estará alineado a la derecha */
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  border: 1px solid var(--color-secundario);
+  background: var(--color-primario);
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+.navbar-menu a {
+  color: var(--5799-f-7, #5799F7);
+  font-family: "IBM Plex Mono";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.00875rem;
+  text-decoration: none;
+}
+
+
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  gap: 2rem;
+  width: 90;
+  
+  
+}
+
+.header__image {
+  width: 50%; /* Ajusta este valor al tamaño que desees */
+  border-radius: 50%; /* Esto hará que la imagen tenga bordes redondeados */
+  object-fit: cover; /* Esto asegurará que la imagen cubra todo el espacio disponible sin distorsionarse */
+  width: 21.875rem;
+  height: 21.875rem;
+  flex-shrink: 0;
+}
+
+.heading-primary {
+  align-self: stretch;
+  color: #FFF;
+  font-family: Raleway;
+  font-size: 2.75rem;
+}
+.highlight {
+  color: var(--color-secundario);
+  font-family: Raleway;
+  font-size: 2.75rem;
+}
+.heading-subtext {
+  width: 30.75rem;
+  color: var(--3-df-2-f-2, #3DF2F2);
+  font-family: "IBM Plex Mono";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem; /* 171.429% */
+  letter-spacing: 0.00875rem;
+}
+
+.btn {
+  border-radius: 0.25rem;
+  border: 1px solid var(--color-secundario);
+  background: var(--color-primario);
+  box-shadow: 0px 8px 30px 0px rgba(63, 142, 0, 0.50);
+  display: flex;
+  padding: 1.3125rem 4rem;
+  align-items: center;
+  gap: 0.625rem;
+  color: #ffffff; /* Cambia este valor al color que desees para el texto del botón */
+  text-align: center; /* Esto centrará el texto dentro del botón */
+  text-decoration: none; /* Esto eliminará la decoración del texto (como el subrayado) */
+  font-size: 16px; /* Cambia este valor al tamaño de fuente que desees */
+  cursor: pointer; /* Esto cambiará el cursor a un puntero cuando pases el mouse sobre el botón */
+  transition: background-color 0.3s ease; /* Esto agregará una transición al color de fondo del botón */
+}
+
+.btn:hover {
+  background-color: #2980b9; /* Cambia este valor al color que desees para el fondo del botón cuando pases el mouse sobre él */
+}
+
+.download {
+ color:var(--color-enfasis)
+}
+
+
+/* Worked with */
+.worked-with {
+  text-align: center; /* Esto centrará el texto y el botón */
+  padding: 2rem; /* Esto agregará un padding a la sección */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0px;
+}
+
+.worked-with h2 {
+  color: var(--color-secundario);
+
+}
+
+.worked-with .btn {
+  width: 10rem; /* Esto establecerá el ancho del botón */
+  height: 3.75rem; /* Esto establecerá la altura del botón */
+  display: flex; /* Esto hará que la imagen se centre dentro del botón */
+  justify-content: center; /* Esto centrará la imagen horizontalmente */
+  align-items: center; /* Esto centrará la imagen verticalmente */
+  padding: 0; /* Esto eliminará el padding predeterminado del botón */
+}
+
+.worked-with .btn img {
+  max-width: 100%; /* Esto hará que la imagen ocupe todo el espacio disponible, pero no más */
+  max-height: 100%; /* Esto asegurará que la imagen no se distorsione */
+}
+
+h2{
+  color: var(--3-df-2-f-2, #3DF2F2);
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+}
+
+
+/* Estilo para el contenedor del footer */
+.footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--color-primario);
+  padding: 0px; /* Ajusta según sea necesario */
+  text-align: center;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+  border: 1px solid var(--color-secundario);
+  background: var(--color-primario);
+}
+
+/* Estilo para los iconos de redes sociales dentro del footer */
+.footer__social-icons {
+  margin: 20px 0;
+}
+
+/* Estilo para los enlaces de los iconos de redes sociales dentro del footer */
+.footer__social-icons a {
+  margin: 0 10px;
+  color: var(--color-enfasis); /* Ajusta este color al color de tus enlaces en el navbar */
+  text-decoration: none;
+}
+
+.footer__text{
+  color: var(--color-secundario);
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+}
