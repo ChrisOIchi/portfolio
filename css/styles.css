@@ -90,18 +90,20 @@ html {
 
 }
 
-.copied-message {
-  color: #2ecc71; /* Cambia el color a tu preferencia */
-  font-size: 0.875rem; /* Tamaño de fuente */
-  margin-left: 0.5rem; /* Ajusta el margen izquierdo según sea necesario */
+.tooltip {
+  position: fixed; /* Cambiado de absolute a fixed */
+  background-color: var(--color-enfasis);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none; /* Evitar que el tooltip bloquee los clics en elementos subyacentes */
 }
-
-.copied-message.active {
+.tooltip.active {
   opacity: 1;
 }
-
 
 a {
   text-decoration: none;

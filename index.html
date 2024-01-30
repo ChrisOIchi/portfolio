@@ -28,9 +28,11 @@
         </ul>
         <ul class="navbar-menu">
             <li class="email">
+                <div class="tooltip" id="copyTooltip">Copied</div>
                 <button id="copyEmailBtn" class="email-btn">
                     <i class="fa-regular fa-clone"></i>  obedosunae@gmail.com</button>
             </li>
+            
         </ul>
     </div>
 
@@ -99,7 +101,7 @@
         <img class="contact-img" src="img/zorro_correo.png" alt="">
         <h2>Contact me...</h2>
     </div>
-    <form action="submit_form.php" method="POST">
+    <form name="contact" action="/enviar.php" data-netlify="true" method="POST">
         <div class="form-group">
             <label class="form__texto" for="name">Name:</label>
             <input class="contact-form__campos" type="text" id="name" name="name" required>
