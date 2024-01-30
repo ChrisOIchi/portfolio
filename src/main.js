@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
           // Ocultar el tooltip después de 2 segundos
           setTimeout(function() {
               copyTooltip.classList.remove("active");
-          }, 2500);
+          }, 2000);
       }).catch(function(err) {
           console.error('Error al copiar al portapapeles: ', err);
       });

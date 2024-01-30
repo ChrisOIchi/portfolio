@@ -15,6 +15,7 @@ body {
   background: var(--0468-bf, #0455BF);
   font-family: 'IBM Plex Mono', monospace;
   font-size: 16px;
+
 }
 
 html {
@@ -37,7 +38,6 @@ html {
   display: flex;
   justify-content: space-between;
   padding-right: 2rem;
-
 }
 
 .navbar-menu {
@@ -51,7 +51,7 @@ html {
 .navbar-menu a {
   color: var(--5799-f-7, #5799F7);
   font-family: "IBM Plex Mono";
-  font-size: 0.875rem;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -110,7 +110,7 @@ a {
   font-family:  "IBM Plex Mono";
 }
 
-/* Header */
+/* ================== Header ====================*/
 .header {
   display: flex;
   justify-content: center;
@@ -123,8 +123,8 @@ a {
   border-radius: 0.5rem;
   border: 1px solid var(--color-secundario);
   background: var(--color-primario);  
-  
-  
+  margin-bottom: 8rem;
+  margin-top: 8rem;
 }
 
 .header__image {
@@ -184,41 +184,7 @@ a {
 }
 
 
-/* Worked with */
-.worked-with {
-  text-align: center; /* Esto centrará el texto y el botón */
-  padding: 2rem; /* Esto agregará un padding a la sección */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 0px;
-  margin-bottom: 3rem;
-}
 
-.worked-with h2 {
-  color: var(--color-secundario);
-
-}
-
-.worked-with .btn {
-  width: 10rem; /* Esto establecerá el ancho del botón */
-  height: 3.75rem; /* Esto establecerá la altura del botón */
-  display: flex; /* Esto hará que la imagen se centre dentro del botón */
-  justify-content: center; /* Esto centrará la imagen horizontalmente */
-  align-items: center; /* Esto centrará la imagen verticalmente */
-  padding: 0; /* Esto eliminará el padding predeterminado del botón */
-}
-
-.worked-with .btn img {
-  max-width: 100%; /* Esto hará que la imagen ocupe todo el espacio disponible, pero no más */
-  max-height: 100%; /* Esto asegurará que la imagen no se distorsione */
-}
-
-h2{
-  color: var(--3-df-2-f-2, #3DF2F2);
-  font-family: "IBM Plex Mono";
-  font-size: 16px;
-}
 
 
 /* Estilo para el contenedor del footer */
@@ -253,8 +219,78 @@ h2{
   font-size: 16px;
 }
 
-/*================ Contact ====================*/
-.contact{
+
+
+
+
+/* Boton hamburgesa */
+.mobile-menu-toggle {
+  display: none; /* Oculta el botón en dispositivos grandes */
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--color-secundario);
+  margin: 6px 0;
+}
+
+/* Dentro de tu archivo CSS */
+
+@media only screen and (max-width: 600px) {
+  .mobile-menu-toggle {
+      display: block; /* Muestra el botón en dispositivos pequeños */
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 2;
+  }
+
+  .navbar-menu {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(1, 3, 38, 0.90);
+      z-index: 3;
+      text-align: center;
+      overflow-y: auto;
+  }
+
+  .navbar-menu.active {
+      display: flex;
+  }
+
+  /* Otros estilos para el menú desplegable en dispositivos pequeños */
+  .navbar-menu li {
+    padding: 0;
+    margin-top: 1rem;
+    margin-right: 10px;
+  }
+
+  .navbar-menu a {
+      color: var(--color-terciario);
+      text-decoration: none;
+      font-size: 18px;
+  }
+
+  .navbar-menu .email {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .email-btn {
+      margin-top: 10px;
+  }
+}
+
+/*===================== Portafolio ================== */
+.portfolio {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -264,6 +300,123 @@ h2{
   background: var(--color-primario);
   margin-top: 3rem;
   margin-bottom: 2rem;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-bottom: 8rem;
+  margin-top: 8rem;
+  
+}
+
+.portfolio h2 {
+  color: var(--color-secundario);
+  font-family: "IBM Plex Mono";
+  font-size: 22px;
+}
+
+.portfolio__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.portfolio__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primario);
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-secundario);
+  background: var(--color-primario);
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  margin: 0 auto;
+  padding: 1rem;
+  gap: 1rem;
+  height: 250px;
+  width: 250px;
+  text-align: center; /* Alinea el texto al centro */
+
+}
+
+.portfolio__item img {
+  width: 50%;
+  height: 50%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+}
+
+.portfolio__item h3 {
+  color: var(--color-secundario);
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+}
+
+.portfolio__item p {
+  color: white;
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+}
+
+.portfolio__item a{
+  color: var(--color-enfasis);
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+}
+
+/* Worked with */
+.worked-with {
+  text-align: center; /* Esto centrará el texto y el botón */
+  padding: 2rem; /* Esto agregará un padding a la sección */
+  display: flex;
+  align-items: center;
+  padding-top: 0px;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.worked-with h2 {
+  color: var(--color-secundario);
+
+}
+
+.worked-with .btn {
+  width: 10rem; /* Esto establecerá el ancho del botón */
+  height: 3.75rem; /* Esto establecerá la altura del botón */
+  display: flex; /* Esto hará que la imagen se centre dentro del botón */
+  justify-content: center; /* Esto centrará la imagen horizontalmente */
+  align-items: center; /* Esto centrará la imagen verticalmente */
+  padding: 0; /* Esto eliminará el padding predeterminado del botón */
+  margin-left: 2rem;
+}
+
+.worked-with .btn img {
+  max-width: 100%; /* Esto hará que la imagen ocupe todo el espacio disponible, pero no más */
+  max-height: 100%; /* Esto asegurará que la imagen no se distorsione */
+}
+
+h2{
+  color: var(--3-df-2-f-2, #3DF2F2);
+  font-family: "IBM Plex Mono";
+  font-size: 16px;
+}
+
+/*================ Contact ====================*/
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-primario);
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-secundario);
+  background: var(--color-primario);
+  margin-bottom: 8rem;
+  margin-top: 8rem;
   margin: 0 auto;
   padding: 1rem;
   gap: 1rem;
@@ -361,73 +514,3 @@ h2{
   border-radius: 0.5rem;
   border: 1px solid var(--color-secundario);
 }
-
-
-
-/* Boton hamburgesa */
-.mobile-menu-toggle {
-  display: none; /* Oculta el botón en dispositivos grandes */
-  cursor: pointer;
-}
-
-.bar {
-  width: 25px;
-  height: 3px;
-  background-color: var(--color-secundario);
-  margin: 6px 0;
-}
-
-/* Dentro de tu archivo CSS */
-
-@media only screen and (max-width: 600px) {
-  .mobile-menu-toggle {
-      display: block; /* Muestra el botón en dispositivos pequeños */
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      z-index: 2;
-  }
-
-  .navbar-menu {
-      display: none;
-      flex-direction: column;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(1, 3, 38, 0.90);
-      z-index: 3;
-      text-align: center;
-      overflow-y: auto;
-  }
-
-  .navbar-menu.active {
-      display: flex;
-  }
-
-  /* Otros estilos para el menú desplegable en dispositivos pequeños */
-  .navbar-menu li {
-    padding: 0;
-    margin-top: 1rem;
-    margin-right: 10px;
-  }
-
-  .navbar-menu a {
-      color: var(--color-terciario);
-      text-decoration: none;
-      font-size: 18px;
-  }
-
-  .navbar-menu .email {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
-
-  .email-btn {
-      margin-top: 10px;
-  }
-}
-
-
