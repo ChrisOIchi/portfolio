@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diseñador Freelancer</title>
+    <!-- icono de la pagina -->
+    <link rel="icon" href="img/casco.svg" type="image/x-icon">
+    <title>Web Developer Freelancer</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,7 +23,7 @@
     <div class=navbar>
         <ul class="navbar-menu">
             <li><a href="#home">Home</a></li>
-            <!-- <li><a href="#about-me">About me</a></li>-->
+            <li><a href="#about-me">About me</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <!--<li><a href="#skills">Skills</a></li> -->
             <li><a href="#get-in-touch">Get In Touch</a></li>
@@ -35,9 +37,18 @@
             
         </ul>
     </div>
+    <div id="home" class="home"></div>
+
+    <!-- About me -->
+    <div id="about-me" class="about-me separacion-top">
+        <div class="about__contenido">
+            <img class="about-img" src="img/astronaut.svg" alt="">
+            <h2>About</h2>
+        </div>
+    </div>
 
     <!-- Heading -->
-    <header id="home" class="header">
+    <header  class="header">
         <div class="header__text-box">
             <h1 class="heading-primary">Christopher <span class="highlight">Osuna</span></h1>
             <p class="heading-subtext">I'm your ally in web development, turning lines of code into impactful experiences. A passionate problem solver on a mission to elevate your digital world.</p>
@@ -78,8 +89,12 @@
 
     <!-- Portfolio -->
     
-    <div id="portfolio" class="portfolio">
-        <h2>Portfolio</h2>    
+    <div id="portfolio" class="about-me">
+        <div class="about__contenido">
+            <img class="about-img" src="img/planet.svg" alt="">
+            <h2>Portfolio</h2>
+        </div>
+    </div>  
 
         <div class="portfolio__container">
             <div class="portfolio__item">
@@ -135,6 +150,12 @@
 
 
     <!-- Contact -->
+    <div id="portfolio" class="about-me">
+        <div class="about__contenido">
+            <img class="contact-img" src="img/rocket.svg" alt="">
+            <h2>Contact</h2>
+        </div>
+    </div> 
 
     <div class="contact">
         <h2>Get In Touch</h2>
@@ -147,7 +168,6 @@
 <!-- Contact Form -->
 <section id="get-in-touch" class="contact-form">
     <div class="contactme">
-        <img class="contact-img" src="img/zorro_correo.png" alt="">
         <h2>Contact me...</h2>
     </div>
     <form name="contact" action="/enviar.php" data-netlify="true" method="POST">

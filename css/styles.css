@@ -79,7 +79,7 @@ html {
 .email-btn {
   border: none;
   background: inherit;
-  color: var(--color-negro);
+  color: var(--color-blanco);
   font-size: 1.2em; /* Ajusta esto para cambiar el tamaño del texto */
   padding: 1px 10px; /* Ajusta esto para cambiar el tamaño del botón */
   cursor: pointer;
@@ -89,7 +89,7 @@ html {
 
 .email:hover .email-icon, 
 .email-btn:hover,
-.portfolio__item a:hover {
+.portfolio__item, .navbar-menu a:hover {
   color: var(--color-violeta); /* Cambia este valor al color que desees para el icono cuando pases el mouse sobre él */
 
 }
@@ -130,19 +130,22 @@ a {
 
 
 /* ================== Header ====================*/
+.separacion-top{
+  margin-top: 8rem;
+
+}
 .header {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
-  gap: 2rem;
+  height: 70vh;
+  gap: 3rem;
   width: 100%;
-  margin-top: 5rem;
   border-radius: 0.5rem;
   border: 1px solid var(--color-morado);
   background: var(--color-blanco);  
-  margin-bottom: 8rem;
-  margin-top: 8rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .header__image {
@@ -167,7 +170,7 @@ a {
   font-size: 2.75rem;
 }
 .heading-subtext {
-  width: 30.75rem;
+  width: 40rem;
   color: var(--color-negro);
   font-family: "IBM Plex Mono";
   font-size: 0.875rem;
@@ -255,6 +258,28 @@ a {
   font-size: 16px;
 }
 
+/* aboout */
+
+.about-me{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.about__contenido{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+.about-me h2 {
+  color: var(--color-blanco);
+  font-family: "IBM Plex Mono";
+  font-size: 32px;
+  
+}
+
 
 /*===================== Portafolio ================== */
 .portfolio {
@@ -269,8 +294,8 @@ a {
   margin-bottom: 2rem;
   margin: 0 auto;
   padding: 1rem;
-  margin-bottom: 8rem;
-  margin-top: 8rem;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
   
 }
 
@@ -439,14 +464,7 @@ a {
   padding: 0 auto;
 }
 
-.contact-img{
-  width: 50%;
-  border-radius: 50%;
-  object-fit: cover;
-  width: 6rem;
-  height: 6rem;
-  flex-shrink: 0;
-}
+
 
 .contact-form {
   display: flex;
